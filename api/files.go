@@ -49,9 +49,9 @@ func FileCreateHandler(w http.ResponseWriter, r *http.Request) {
 	orig_mime_type := mime_type
 
 	user_mime_type := r.Header.Get("x-pwndrop-content-type")
-	log.Debug("User has specified the following mime type: " + user_mime_type)
 	if len(user_mime_type) > 0 {
 		mime_type = user_mime_type
+		log.Debug("User has specified the following mime type: " + user_mime_type)
 	}
 
 	os.Mkdir(filepath.Join(data_dir, "files"), 0700)
