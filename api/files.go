@@ -46,11 +46,12 @@ func FileCreateHandler(w http.ResponseWriter, r *http.Request) {
 		mime_type = "application/octet-stream"
 	}
 	log.Debug("upload: " + mime_type)
+	orig_mime_type := mime_type
 
-	forced_mime_type := r.Header.Get("x-pwndrop-content-type")
-	log.Debug("requested to force mime type:" + forced_mime_type)
-	if forced_mime_type == "" {
-		forced_mime_type = mime_type
+	user_mime_type := r.Header.Get("x-pwndrop-content-type")
+	log.Debug("User has specified the following mime type: " + user_mime_type)
+	if len(user_mime_type) > 0 {
+		mime_type = user_mime_type
 	}
 
 	os.Mkdir(filepath.Join(data_dir, "files"), 0700)
@@ -74,9 +75,9 @@ func FileCreateHandler(w http.ResponseWriter, r *http.Request) {
 		FileSize:     fi.Size(),
 		UrlPath:      url_path,
 		RedirectPath: "",
-		MimeType:     forced_mime_type,
+		MimeType:     mime_type,
 		SubMimeType:  mime_type,
-		OrigMimeType: mime_type,
+		OrigMimeType: orig_mime_type,
 		CreateTime:   time.Now().Unix(),
 		IsEnabled:    true,
 		IsPaused:     false,
