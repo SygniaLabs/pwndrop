@@ -1,6 +1,6 @@
 FROM golang:1.18.4 as base
 WORKDIR /go
-RUN git clone https://github.com/SygniaLabs/pwndrop
+RUN git clone https://github.com/AGHRapidPro/pwndrop
 
 FROM base as build
 WORKDIR /go/pwndrop
