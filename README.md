@@ -37,7 +37,7 @@ go version #verify at least 1.18
 
 Build Pwndrop:
 ```
-git clone https://github.com/Sygnia/pwndrop.git
+git clone https://github.com/AGHRapidPro/pwndrop
 cd pwndrop
 make build
 ls build/
@@ -50,9 +50,9 @@ You can use the compiled binary in the same way described in the original README
 
 *****************************
 <p align="center">
-  <img alt="pwndrop logo" src="https://raw.githubusercontent.com/kgretzky/pwndrop/master/media/pwndrop-logo-512.png" height="120" />
+  <img alt="pwndrop logo" src="https://raw.githubusercontent.com/AGHRapidPro/pwndrop/master/media/pwndrop-logo-512.png" height="120" />
   <p align="center">
-    <img alt="pwndrop title" src="https://raw.githubusercontent.com/kgretzky/pwndrop/master/media/pwndrop-title-black-512.png" height="40" />
+    <img alt="pwndrop title" src="https://raw.githubusercontent.com/AGHRapidPro/pwndrop/master/media/pwndrop-title-black-512.png" height="40" />
   </p>
 </p>
 
@@ -61,7 +61,7 @@ You can use the compiled binary in the same way described in the original README
 If you've ever needed to quickly set up an nginx/apache web server to host your files and you were never happy with the limitations of `python -m SimpleHTTPServer`, **pwndrop** is definitely for you!
 
 <p align="center">
-  <img alt="demo" src="https://raw.githubusercontent.com/kgretzky/pwndrop/master/media/demo1.gif" height="500" />
+  <img alt="demo" src="https://raw.githubusercontent.com/AGHRapidPro/pwndrop/master/media/demo1.gif" height="500" />
 </p>
 
 With **pwndrop** you can:
@@ -112,14 +112,14 @@ Make sure there aren't any DNS or HTTP(S) servers running before you attempt to 
 
 I do not recommend running oneliners, before downloading and checking the script code, but if you are really in a hurry, here it is:
 ```
-curl https://raw.githubusercontent.com/kgretzky/pwndrop/master/install_linux.sh | sudo bash
+curl https://raw.githubusercontent.com/AGHRapidPro/pwndrop/master/install_linux.sh | sudo bash
 ```
 
 This will download the latest amd64 release binary and fully install a daemon running in a background.
 
 #### From binary
 
-First you need to download the release package you want from: https://github.com/kgretzky/pwndrop/releases
+First you need to download the release package you want from: https://github.com/AGHRapidPro/pwndrop/releases
 
 Then do the following (this performs same actions to the oneliner):
 
@@ -139,7 +139,7 @@ Then do the following:
 
 ```
 sudo apt-get -y install git make
-git clone https://github.com/kgretzky/pwndrop
+git clone https://github.com/AGHRapidPro/pwndrop
 cd pwndrop
 make
 make install
