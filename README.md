@@ -37,7 +37,7 @@ go version #verify at least 1.18
 
 Build Pwndrop:
 ```
-git clone https://github.com/Sygnia/pwndrop.git
+git clone https://github.com/SygniaLabs/pwndrop.git
 cd pwndrop
 make build
 ls build/
